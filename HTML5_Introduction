@@ -1,0 +1,51 @@
+HTM5: New Structural Elements
+- Aimed towards simplicity
+
+Improvements include:
+a. new doctype definition
+b. the "type" attribute for elements such as <link> and <script> are now optional
+c. the syntax constraints have now been relaxed.
+d. new structural elements have been added.
+
+-- MINIMAL HTML DOCUMENT----------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page Title</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+<!-- Random content -->
+</body>
+</html>
+------------------------------------------
+
+- No quotes needed for most attribute values, if an attribute value is made of a single word, and is alphanumeric.
+- No closing tags needed for most html elements.
+
+--------------------------------------------------------------------
+
+New Structural Elements
+- Currently in HTML, "parts" are implemented by relying heavily on <div> and <span> with different id and attributes, as also CSS and Javascript.
+
+Disadvantages/ Limitations of this approach:
+- id and class names might differ from one developer to other, and so on.
+- Even with same id and class names, css rules may be different.
+- JavaScript libraries become heavier over the years.
+- Web pages become code heavy as well.
+- These elements can not be handled by Web browser natively.
+
+To overcome these limitations, as also based on surveys for commonly used id's and class names all over the WWW, new elements are added to HTML5 set.
+
+1. <header> instead of <div class="header"> -->Typically header of a web site, that appears on top of each page, or a header of a long <article> or long <section>.
+2. <aside> instead of <div class="aside"> -->Section whose content is not directly related to main content surrounding it, but provides additional information.
+3. <footer> --> Contains the footer of a site, a long <article> or a long <section>/
+4. <nav> --> Section containing the main navigation links (within document or to other pages).
+5. <article> --> Independent content, that can be individually extracted from document, and alienated, without compromising the understanding of subject. (example: Blog Post).
+6. <section> --> Generic section used to group different articles for various purposes. OR to definte the different sections of single article. Generally used with a <header>
+7. <time> --> Used to mark up time and dates.
+8. <figure>, <figcaption> --> To encapsulate a figure as a single term, and contains a caption for figure, respectively.
+9. <main> --> Represents main content of body/document/application. This area consists of content directly related to, or expands on central topic of document.There can only be one <main> element in a document.

@@ -71,4 +71,60 @@ To overcome these limitations, as also based on surveys for commonly used id's a
     }
 ******************************************************/
 
+**Adding Retro-Compatibility:
+Polyfill--> Piece of JavaScript code to include in HTML page,that emulates HTML5 feautres not yet 
+supported/implemented by browsers. Usually polyfills emulates feature, only on detecting no native support.
+
+Find polyfills at:
+1. http://caniuse.com
+2. http://html5please.com
+3. http://modernizr.com
+
+EXAMPLE: (with <details> and <summary>)
+<details> and <summary> not supported by all browsers (FF).How to use them in website --> polyfills.
+
+--> Complete polyfill for all browsers for <details> and <summary>:
+a. http://codepen.io/w3devcampus/pen/GJrQzP
+b. http://codepen.io/w3devcampus/pen/NqdyJK
+
+--------------------------------------------------------------------------------------------------
+*** The <time> and <mark> elements:
+
+<time>
+	Useful for marking a time or a duration in the document
+	Provides a human readable part (between <time> and </time>), and a machine readable part contained within a 		 	datetime attribute.
+	Dates are expressed as YYYY-MM-DD.
+	
+	Machine readable part adds semantics to be used by search engines for indexing,
+	Useful scenarios:
+		Alerts on birthdays, automatically adding dates or events that contain <time> into a calendar.
+		
+The DATETIME attribute:
+	Can be used for indicating a date/time or a duration.
+
+Date/Time Values:
+	Supports different specifications 'year', 'month in a year', 'week in a year', 'a time'.
+	
+	Examples:
+			datetime="1905"					year 1905
+			datetime="1905-11"				November 1905
+			datetime="11-13"				November 13th of any year
+			datetime="1905-W21"				Week 21 of year 1905
+			datetime="1905-11-13 09:00"		Nov 13, 1905, 9am
+			datetime="1905-11-13T09:00"		Same as above example.
+			datetime="09:00"Z"				9:00 in the morning GMT.
+			datetime="09:00-05"				9:00 in the morning, GMT minus 5 hours
+			
+			
+
+
+
+
+
+
+
+
+
+
+
 

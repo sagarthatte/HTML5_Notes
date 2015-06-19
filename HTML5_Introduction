@@ -115,14 +115,88 @@ Date/Time Values:
 			datetime="09:00"Z"				9:00 in the morning GMT.
 			datetime="09:00-05"				9:00 in the morning, GMT minus 5 hours
 			
+
+DURATION VALUES:
+	Use the prefix "P" for 'period' as in <time datetime="P4D"> (period = four days)
+	Start attribute string value with a P to indicate period and ends with another letter:
+		D for days
+		H for hours,
+		M for minutes,
+		S for seconds.
+	Can separate elements, so datetime="P 4 D" is same thing.
+	Using a "T" after "P" allows to indicate more accurate time duration:
+		<time datetime="PT4H 6M 12.55S"> is a duration of 4 hours, 6 minutes and 12.55 seconds.
+	Alternatively, use a duration time component.
+
+<TIME> Element with NO Attributes:
+	Used without attributes, value between the <time> tags, shold follow syntax given by specification, so that 			machines understand it. However, recommended to use datetime attribute, as it gives more freedom in the way you     can display date/time/duration in human-readable form.
+	
+-------------------------------------------------------------------------------------------------------------------
+
+THE <mark> ELEMENT:
+	Used for indicating text as marked or highlighted for reference purposes, due to relevance in another context.
+	
+	Some use cases:
+		a. Display search results with search strings highlighted.
+		b. Highligh important parts of a text, like "quotes".
+		c. Replace <strong> and <em> with <mark> as suitable.
+
+------------------------------------------------------------------------------------------------------------------
+
+The new HTML5 'DOWNLOAD' attribute for <A HREF>:
+
+Old way to download files using HTML and HTTP:
+	Classic way to make hyperlinks is <a href="...">some text </a>
+	What happens on clicking on this link, depends on type of MIME received by the browser.
+		a. If linked to a file, browser knows how to render (an html page, a fig, jpg or png image, etc).
+			High chance that MIME received by browser is somewhat like this:
+			1. Content-type: text/html, text/plain, image/gif, image/jpg, etc.
 			
+			HTML Code such as:
+			<a href="image.jpg">Please right click on this to dowload the picture </a>
+			will ask remote HTTP server to send back the image file. Browser will receive in teh HTTP response header 			from the server (and by default, browser will display image in new tab):
+			Content-Disposition: attachment; filename="MyImage.png";
+			
+NEW Way to Download a File using an Arbitrary Name: The DOWNLOAD Attribute:
+	HTML5 uses new attribute 'download' to download resources rather than navigating to them. 
+	Example shows how to trigger download of image by browser (instead of rendering it), with a name different from
+	name of the resource.
+		<a href="/asset-v1:W3Cx@asset+block/normal.gif" download="MichaelBuffa.gif">
+		download picture of Michael Buffa</a>
+		
+		NOTE: 'Download' attribute not supported by IE or Safari, as of Feb 2015.
+		
+		WARNING: Since 2015, for security purposes, the image must be located on same domain as the HTML page that
+				contains the link.
+-------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
+HTML TRANSLATE ATTRIBUTE
+	Attribute is used to limit the impact of translation tools such as Google Translate by prohibiting the translation
+	of certain content. There are cases, where some parts of a document, must not be translated.
+	
+	Use Cases:
+		a. HTML pages containing source code.
+		b. Video Game websites that propose cheat codes, etc.
+		c. Street names, author names, etc.
+		
+	- Google Translate and MS online Translate services have ability to prevent translation of content by adding 
+	  markup to content, but this is achieved using multiple ways.
+	  
+	  PRINCIPLE: Provide hints to translating tools.
+	  		- The translate attribute is an enumerated attribute used to specify whether an element's attribute values 			  and the values of its text node children are to be translated when page is localized, or leave them
+	  		  unchanged.
+	  		- Attribute keywords are empty string, yes, and no. Empty string and 'yes' map to 'yes' state. 'no' maps
+	  		  to 'no state'. In addition, a third state i.e. 'inherit' state, which is the missing value default.
+	  		  
+	  	EXAMPLE: specifying parts of html element that should not be translated:
+	  		<span translate="no" class="author">Michael Ham</span>
+	  		
+  		EXAMPLE: Inheritance between elements
+  			- When defining an element as not being translatable, children inherit behavior and are themselves
+  			  not translatable. The reverse is also true.
+  			<p translate="no">This......<span>........</span> ..... </p>
+		
+		
 
 
 

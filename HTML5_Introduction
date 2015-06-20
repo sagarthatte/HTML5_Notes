@@ -196,9 +196,81 @@ HTML TRANSLATE ATTRIBUTE
   			  not translatable. The reverse is also true.
   			<p translate="no">This......<span>........</span> ..... </p>
 		
+--------------------------------------------------------------------------------------------------------------
+
+MICRODATA:
+	- HTML5 way of providing machine-readable content embedded in a Web document.
+	- Adding microdata to pags, helps search engines better understand page content, the main topic, etc.
+	- Main interest for microdata is 'Search Engine Optimization' (SEO).
+	
+	- Information is not visible to humans, it is purely 'semantic information'.
+	- Popular kinds of microdata are:
+		a. Events
+		b. Person's profile details
+		c. Geographic location
+		d. Recipe Details
+		e. Organization Details
+		f. Product Specifications, etc.
 		
+	EXAMPLE: (Microdata to describe a person).
+	<section itemscope itemtype="http://schema.org/Person">
+		<h1>Contact Information</h1>
+		<dl>
+			<dt>Name</dt>
+			<dd itemprop="name">Michael Buffa</dd>
+			<dt>Position</dt>
+			<dd><span itemprop="jobTitle">Professor/Researcher</span> for <span itemprop="affiliation">Univ</span>
+			</dd>
+		</dl>
+	</section>
+	
+* Data that can be processed, organized, structured, or presented in a given context.
+	Use Cases:
+		- Browser or browser extension, may interpret last example as an address, and may propose to send it to a map
+		  application.
+		- A web crawler may interpret this as address, and display in its responses, using dedicated layout.
+		- Some JScript code in the page can access this data.
+		- Other types of microdata, for events, for ex, browser may prompt to calendar application, etc.
+		
+-----------------------
+Testing Tools:
+	- https://developers.google.com/structured-data/testing-tool/
+	- http://foolip.org/microdatajs/live/
 
+--------------------------------
+Implementing Microdata in your page (using attributes 'itemscope', 'itemtype', 'itemprop'):
+	Basic:
+		Adding microdata to HTML page is simple, and requires only three attributes mentioned above.
+	
+	1. Define a container element, by adding an 'itemscope' attribute:
+		- Need to add itemscope attribute to an HTML element.
+		- This defines 'global object' for which we define properties.
+		- Elements can be of different types (to be explained later).
+		
+	2. Specify vocabulary for microdata with the itemtype attribute of container element.
+		- HTML5 proposes semantic elements to represent sections, articles, headers, etc., but does not propose
+		  specific elements/attributes to describe address/person/product (bit like XML tags).
+		- Need special vocabulary for this.
+		- Define your own vocab, or use existing ones, defined at http://www.schema.org
+		- Works with properties defined in name/value pairs. Names are defined in corresponding vocab.
+		
+	3. Add properties using itemprop attribute in HTML elements inside container.
+	
+	----------------------------------------------------------------------------------------
+	
+	Tools for generating, visualizing, debugging microdata.
+		
+		1. http://www.barryko.com/seo/html5-microdata-schema-generator/
+		2. http://www.microdatagenerator.com/
+		3. http://www.schema-creator.org
+		
+		Microdata Visualization:
+		1. http://tools.seomoves.org/microdata
+		2. http://miageprojet2.unice.fr/Intranet_de_Michel_Buffa/Outils_de_validation_HTML5%2F%2Fextensions_de_navigateurs
+		
+--------------------------------------------------
 
-
-
+	
+	
+		
 

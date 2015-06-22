@@ -62,5 +62,28 @@ Before HTML5, how did we embed videos?
 ---------------------------------------------------------------------------------------------------------------
 
 The <AUDIO> element
+	- Composed of several layers
+	- Useful for embedding audio player into a web page. Dedicated for streamed audio.
+	- Similar to <audio> in usage and its API.
+	- "Web Audio API" is designed for musical applications and adding sound effects to games.
+	- Pure JScript API supports manipulation of sound samples, music synthesis,etc
+	- Comes with a set of predefined sound processing modules (reverb, delay, etc).
+	- The attributes, event set and JS API of the <audio> element, are just reduced versions of the ones from
+	  <video> element, and here we only address differences and peculiarities.
+	  
+	BASIC USAGE:
+	<audio controls="controls">
+	  <source src="https://dl.dropboxusercontent.com/u/1631516/horse.ogg" type="audio/ogg" />
+	  <source src="https://dl.dropboxusercontent.com/u/1631516/horse.mp3" type="audio/mp3" />
+	  Your browser does not support the audio element.
+	      Download the audio/video in
+	     <a href=”https://dl.dropboxusercontent.com/u/1631516/horse.ogg”>OGG</a>
+	     or <a href=”https://dl.dropboxusercontent.com/u/1631516/horse.mp3”>MP3</a> 
+	     format.
+	</audio>
 	
-
+	- Similar to <video>, we use 'controls' attribute to render play/stop, time, volume, progress widgets.
+	
+	- Other similarities:
+		a. between <audio> and </audio>, we added text msg, to display if browser doesn't support <audio> element.
+		b. Use several <source>..</source> for different audio formats. Browser uses first recognized format.

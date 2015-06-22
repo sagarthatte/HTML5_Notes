@@ -1,1 +1,66 @@
 //Notes for HTML5 Week 2 - Multimedia
+
+* <video> element
+	- <video> element is one of the two "Flash killers" (the other is <canvas>). 
+	- Designed to replace horrible things like embedded flash objects.
+	
+Before HTML5, how did we embed videos?
+	
+    <object width="425" height="344">
+       <param name="movie"
+              value="http://www.youtube.com/v/9sEI1AUFJKw&hl=en_GB&fs=1&">
+       </param>
+       <param name="allowFullScreen"   value="true"></param>
+       <param name="allowscriptaccess" value="always"></param>
+       <embed src="http://www.youtube.com/v/9sEI1AUFJKw&hl=en_GB&fs=1&"
+              type="application/x-shockwave-flash"
+              allowscriptaccess="always" allowfullscreen="true"
+              width="425" height="344">
+       </embed>
+    </object>
+    
+    - Before HTML5, this was the only way to embed videos. Embedding flash player videos, made it impossible to watch on some mobile platforms. (Apple devices)
+    
+    After HTML5:
+    	- The new technique is simpler and better.
+    	
+    <video controls autoplay> 
+		<!-- I have three versions of the video encoded with
+		     different codecs.  The browser will automatically
+		     choose the first one it knows it can play. --> 
+		<source src=http://html5doctor.com/demos/video-canvas-magic/video.webm type=video/webm> 
+		<source src=http://html5doctor.com/demos/video-canvas-magic/video.ogg type=video/ogg> 
+		<source src=http://html5doctor.com/demos/video-canvas-magic/video.mp4 type=video/mp4> 
+	</video>
+	
+    Note:
+    	1. 'controls' attribute indicates that control panel with play/stop/volume/progress is displayed.
+    	2. Usually, browser will use the first format it recognizes. Some browsers use a heuristic approach for a
+    		preferred format.
+    	3. <video> element is a DOM member, so CSS3 styling, and transformations can be applied, as well as
+    		manipulation using DOM API. (to be discussed in more detail later).
+    		
+    - Most current browsers support the <VIDEO> element.(except Opera Mini and IE8.).
+    
+    **RESTRICTION**
+    	- Cannot embed YOUTUBE or DAILYMOTION video using <video> element.
+    	- This is due to commercial reasons, and because advertising is auto added to videos.
+    	- Need to embed an <iframe> that will render HTML5 videos in your web page.
+    	
+	- EXAMPLE with a YouTube video:
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZH1XOsv8Oyo" frameborder="0" allowfullscreen>
+    </iframe>
+
+	- CODEC SUPPORT
+		- Not the same from one browser to other. Since 2012, browsers have been updated in this context.
+		- To check codec support, visit http://ie.microsoft.com/TEStdrive/Graphics/VideoFormatSupport/Default.html
+		- Recommended codec working for all browsers, as of 2015
+			H264/mp4
+		- Recommended method to target large audience, is to encode videos using major supported formats.
+		
+---------------------------------------------------------------------------------------------------------------
+
+The <AUDIO> element
+	
+

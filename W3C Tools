@@ -1,0 +1,11 @@
+- W3C Web Quality Tools are free, open-source. Provides with fair and reliable help in building and validationg web content.
+
+1. W3C Validator --> Checks markup validity of web documents in HTML, XHTML, SMIL, MathML, etc..
+
+2. CSS Validator --> Checks Cascading Style Sheets (CSS) and XHTML documents using CSS for validity.
+
+3. Unicorn --> unified validator, helps improve quality of web pages, by performing variety of checks. Gathers results of popular HTML and CSS Validators,as well as other useful services such as 'Internationalization', 'RSS/Atom feeds' and http headers.
+
+4. Link Checker --> Looks for issues in links, anchors and referenced objects in a web page, CSS page, or recursively on a whole web site.
+
+5. W3C Cheatsheet --> Provides quick access to useful information from variety of specifications published by W3C. Aims at giving in a very compact and mobile friendly format, a compilation of useful knowledge.

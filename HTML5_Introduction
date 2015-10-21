@@ -50,7 +50,12 @@ To overcome these limitations, as also based on surveys for commonly used id's a
 8. <figure>, <figcaption> --> To encapsulate a figure as a single term, and contains a caption for figure, respectively.
 9. <main> --> Represents main content of body/document/application. This area consists of content directly related to, or expands on central topic of document.There can only be one <main> element in a document.
 -----------------------------------------------------------------------------------------------------------------
+* BEST PRACTICES
+1. Always add a heading to explicit sectioning content.
+Note: The <header> element is just a container. Not taken into account for defining new sections of a document, nor does it affect hierarchy levels.
+2. Try not to rely only on implicit sectioning i.e. <h1> to <h6>, use <Section>, <Article>, etc instead of only implicit sectioning.
 
+-----------------------------------------------------------------------------------------------------------------
 <Details> and <Summary> elements
 - For displaying a foldable zone in an HTML Document.
 - <Summary> is nested inside <Details> element, and is text for a closed piece of widget.

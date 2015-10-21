@@ -54,6 +54,16 @@ To overcome these limitations, as also based on surveys for commonly used id's a
 1. Always add a heading to explicit sectioning content.
 Note: The <header> element is just a container. Not taken into account for defining new sections of a document, nor does it affect hierarchy levels.
 2. Try not to rely only on implicit sectioning i.e. <h1> to <h6>, use <Section>, <Article>, etc instead of only implicit sectioning.
+3. Visualizing the table of contents is useful for debugging the structure of your page, and checking the presence of headings after explicit sectioning content.
+
+4. In order to NOT display heading content on 'screen'(but make it get detected by screen readers),use technique recommended by Steve Faulkner at 
+		https://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/
+	- Do not use display:none or visibility:hidden since, in these cases headings will not be vocalised by readers.
+
+-----------------------------------------------------------------------------------------------------------------
+About '<MAIN>' element:
+- There must not be more than 1 main element in a document.
+- It must NOT be a descendant of <article>, <aside>, <footer>,<header>, or <nav> element.
 
 -----------------------------------------------------------------------------------------------------------------
 <Details> and <Summary> elements

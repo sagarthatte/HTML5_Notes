@@ -215,7 +215,7 @@ HTML TRANSLATE ATTRIBUTE
 
 MICRODATA:
 	- HTML5 way of providing machine-readable content embedded in a Web document.
-	- Adding microdata to pags, helps search engines better understand page content, the main topic, etc.
+	- Adding microdata to pages, helps search engines better understand page content, the main topic, etc.
 	- Main interest for microdata is 'Search Engine Optimization' (SEO).
 	
 	- Information is not visible to humans, it is purely 'semantic information'.
@@ -279,9 +279,9 @@ Implementing Microdata in your page (using attributes 'itemscope', 'itemtype', '
 		2. http://www.microdatagenerator.com/
 		3. http://www.schema-creator.org
 		
-		Microdata Visualization:
-		1. http://tools.seomoves.org/microdata
-		2. http://miageprojet2.unice.fr/Intranet_de_Michel_Buffa/Outils_de_validation_HTML5%2F%2Fextensions_de_navigateurs
+	Microdata Visualization:
+	1. http://tools.seomoves.org/microdata
+	2. http://miageprojet2.unice.fr/Intranet_de_Michel_Buffa/Outils_de_validation_HTML5%2F%2Fextensions_de_navigateurs
 		
 --------------------------------------------------
 

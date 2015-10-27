@@ -1,4 +1,4 @@
-//Notes for HTML5 Week 2 - Multimedia
+//NOTES FOR HTML5 WEEK 2 - MULTIMEDIA
 
 * <video> element
 	- <video> element is one of the two "Flash killers" (the other is <canvas>). 
@@ -52,9 +52,10 @@ Before HTML5, how did we embed videos?
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZH1XOsv8Oyo" frameborder="0" allowfullscreen>
     </iframe>
 
-	- CODEC SUPPORT
+	- CODEC SUPPORT (One of the major issues that had to be resolved)
 		- Not the same from one browser to other. Since 2012, browsers have been updated in this context.
-		- To check codec support, visit http://ie.microsoft.com/TEStdrive/Graphics/VideoFormatSupport/Default.html
+		- To check codec support, visit
+			https://web.archive.org/web/20150208033359/http://ie.microsoft.com/testdrive/graphics/videoformatsupport				/default.html
 		- Recommended codec working for all browsers, as of 2015
 			H264/mp4
 		- Recommended method to target large audience, is to encode videos using major supported formats.
@@ -87,3 +88,8 @@ The <AUDIO> element
 	- Other similarities:
 		a. between <audio> and </audio>, we added text msg, to display if browser doesn't support <audio> element.
 		b. Use several <source>..</source> for different audio formats. Browser uses first recognized format.
+		
+--------------------------------------------------------------------------------------------------------------------
+* ATTRIBUTES of <VIDEO> and <AUDIO> elements:
+
+	
